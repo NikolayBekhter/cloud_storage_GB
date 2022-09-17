@@ -4,13 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86f0595b-6b13-48ec-8252-9b0b895a3666" name="Changes" comment="" />
+    <list default="true" id="86f0595b-6b13-48ec-8252-9b0b895a3666" name="Changes" comment="Создал проект cloud_storage_GB с двумя модулями cloud_server и cloud_client.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/CloudMainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud_client/src/main/resources/ru/geekbrains/cloud_client/cloud_client.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud_server/src/main/java/ru/geekbrains/CloudServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud_server/src/main/java/ru/geekbrains/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/CloudClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/resources/ru/geekbrains/cloud_client/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2EoIccPnLytnaeqw5rXaP7Uijj9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -21,9 +48,46 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-18"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "last_opened_file_path": "C:/Java/geek-cloud",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.CloudClient">
+    <configuration name="CloudClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.geekbrains.cloud_client.CloudClient" />
+      <module name="cloud_client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.geekbrains.cloud_client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.geekbrains.CloudServer" />
+      <module name="cloud_server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.geekbrains.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CloudClient" />
+        <item itemvalue="Application.CloudServer" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -34,5 +98,16 @@
       <updated>1663255592602</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
