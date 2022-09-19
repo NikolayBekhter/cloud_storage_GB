@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86f0595b-6b13-48ec-8252-9b0b895a3666" name="Changes" comment="Создал проект cloud_storage_GB с двумя модулями cloud_server и cloud_client.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/CloudMainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud_client/src/main/resources/ru/geekbrains/cloud_client/cloud_client.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud_server/src/main/java/ru/geekbrains/CloudServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud_server/src/main/java/ru/geekbrains/FileHandler.java" afterDir="false" />
+    <list default="true" id="86f0595b-6b13-48ec-8252-9b0b895a3666" name="Changes" comment="Реализовал отправку файлов на сервер, с сохранением в папку на локальный диск.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/CloudClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/resources/ru/geekbrains/cloud_client/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/CloudMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/CloudMainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/ru/geekbrains/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/src/main/java/ru/geekbrains/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/ru/geekbrains/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/target/classes/ru/geekbrains/FileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_files/DZ_4_lite.pkt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_files/Снимок экрана от 2022-08-29 20-45-48.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "C:/Java/geek-cloud",
+    "last_opened_file_path": "C:/Java/Chat1.2",
     "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
@@ -97,6 +91,21 @@
       <option name="presentableId" value="Default" />
       <updated>1663255592602</updated>
     </task>
+    <task id="LOCAL-00001" summary="Реализовал отправку файлов на сервер, с сохранением в папку на локальный диск.">
+      <created>1663425263627</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663425263627</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Реализовал отправку файлов на сервер, с сохранением в папку на локальный диск.">
+      <created>1663425476480</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663425476480</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,10 +113,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="lesson_1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Реализовал отправку файлов на сервер, с сохранением в папку на локальный диск." />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализовал отправку файлов на сервер, с сохранением в папку на локальный диск." />
   </component>
 </project>

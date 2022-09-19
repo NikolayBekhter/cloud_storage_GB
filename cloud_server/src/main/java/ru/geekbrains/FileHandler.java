@@ -9,6 +9,8 @@ public class FileHandler implements Runnable{
 
     private static final String SEND_FILE_COMMAND = "file";
 
+    private static final String GET_FILE_LIST = "list";
+
     private static final Integer BATCH_SIZE = 256;
 
     private final Socket socket;
@@ -38,14 +40,28 @@ public class FileHandler implements Runnable{
             System.out.println("Start listening...");
             while (true) {
                 String command = dis.readUTF();
+
+                if (command.equals(GET_FILE_LIST)) {
+                    StringBuilder sb = new StringBuilder(" ");
+                    File folder = new File(SERVER_DIR);
+                    File[] listOfFiles = folder.listFiles();
+
+                    for (File file : listOfFiles) {
+                        if (file.isFile()) {
+                            sb.append(file);
+                            sb.append("  ");
+                        }
+                    }
+                    dos.writeUTF(GET_FILE_LIST + sb.toString().trim());
+                }
+
                 if (command.equals(SEND_FILE_COMMAND)) {
                     String fileName = dis.readUTF();
                     long size = dis.readLong();
                     try (FileOutputStream fos = new FileOutputStream(SERVER_DIR + "/" + fileName)) {
                         for (int i = 0; i < (size + BATCH_SIZE - 1) / BATCH_SIZE; i++) {
                             int read = dis.read(batch);
-                            fos.write(batch, 0, read);
-                        }
+                            fos.write(batch, 0, read);                        }
                     } catch (Exception ignored) {
 
                     }
