@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86f0595b-6b13-48ec-8252-9b0b895a3666" name="Changes" comment="Реализовал отправку файлов на сервер, с сохранением в папку на локальный диск.">
+    <list default="true" id="86f0595b-6b13-48ec-8252-9b0b895a3666" name="Changes" comment="Реализовал отображение списка файлов сервера на клиенте.">
+      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/DaemonThreadFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/CloudMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/CloudMainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/resources/ru/geekbrains/cloud_client/cloud_client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/resources/ru/geekbrains/cloud_client/cloud_client.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/ru/geekbrains/CloudServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/src/main/java/ru/geekbrains/CloudServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/ru/geekbrains/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/src/main/java/ru/geekbrains/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/ru/geekbrains/CloudServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/target/classes/ru/geekbrains/CloudServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/ru/geekbrains/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/target/classes/ru/geekbrains/FileHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_files/DZ_4_lite.pkt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_files/Снимок экрана от 2022-08-29 20-45-48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,10 +56,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "C:/Java/Chat1.2",
+    "last_opened_file_path": "C:/Java/cloud_storage_GB/common/src/main/java/ru/geekbrains",
     "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Java\cloud_storage_GB\common\src\main\java\ru\geekbrains" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.CloudClient">
     <configuration name="CloudClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.geekbrains.cloud_client.CloudClient" />
@@ -105,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663425476480</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Реализовал отображение списка файлов сервера на клиенте.">
+      <created>1663606792417</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663606792417</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +157,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Реализовал отправку файлов на сервер, с сохранением в папку на локальный диск." />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализовал отправку файлов на сервер, с сохранением в папку на локальный диск." />
+    <MESSAGE value="Реализовал отображение списка файлов сервера на клиенте." />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализовал отображение списка файлов сервера на клиенте." />
   </component>
 </project>

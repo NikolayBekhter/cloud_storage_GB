@@ -3,13 +3,12 @@ package ru.geekbrains;
 import java.io.*;
 import java.net.Socket;
 
+import static ru.geekbrains.Command.*;
+import static ru.geekbrains.FileUtils.readFileFromStream;
+
 public class FileHandler implements Runnable{
 
     private static final String SERVER_DIR = "server_files";
-
-    private static final String SEND_FILE_COMMAND = "file";
-
-    private static final String GET_FILE_LIST = "list";
 
     private static final Integer BATCH_SIZE = 256;
 
@@ -30,9 +29,22 @@ public class FileHandler implements Runnable{
         if (!file.exists()) {
             file.mkdir();
         }
+        sendServerFiles();
         System.out.println("Client accepted...");
     }
 
+    private void sendServerFiles() throws IOException {
+        File dir = new File(SERVER_DIR);
+        String[] files = dir.list();
+        assert files != null;
+        dos.writeUTF(GET_FILES_LIST_COMMAND.getSimpleName());
+        dos.writeInt(files.length);
+        for (String file : files) {
+            dos.writeUTF(file);
+        }
+        dos.flush();
+        System.out.println(files.length + " files sent to client");
+    }
 
     @Override
     public void run() {
@@ -40,30 +52,30 @@ public class FileHandler implements Runnable{
             System.out.println("Start listening...");
             while (true) {
                 String command = dis.readUTF();
+                System.out.println("Received command: " + command);
 
-                if (command.equals(GET_FILE_LIST)) {
-                    StringBuilder sb = new StringBuilder(" ");
-                    File folder = new File(SERVER_DIR);
-                    File[] listOfFiles = folder.listFiles();
-
-                    for (File file : listOfFiles) {
-                        if (file.isFile()) {
-                            sb.append(file);
-                            sb.append("  ");
-                        }
-                    }
-                    dos.writeUTF(GET_FILE_LIST + sb.toString().trim());
-                }
-
-                if (command.equals(SEND_FILE_COMMAND)) {
+                if (command.equals(SEND_FILE_COMMAND.getSimpleName())) {
+                    readFileFromStream(dis, SERVER_DIR);
+                    sendServerFiles();
+                } else if (command.equals(GET_FILE_COMMAND.getSimpleName())) {
                     String fileName = dis.readUTF();
-                    long size = dis.readLong();
-                    try (FileOutputStream fos = new FileOutputStream(SERVER_DIR + "/" + fileName)) {
-                        for (int i = 0; i < (size + BATCH_SIZE - 1) / BATCH_SIZE; i++) {
-                            int read = dis.read(batch);
-                            fos.write(batch, 0, read);                        }
-                    } catch (Exception ignored) {
-
+                    String filePath = SERVER_DIR + "/" + fileName;
+                    File file = new File(filePath);
+                    if (file.isFile()) {
+                        try {
+                            System.out.println("File: " + fileName + " sent to server");
+                            dos.writeUTF(SEND_FILE_COMMAND.getSimpleName());
+                            dos.writeUTF(fileName);
+                            dos.writeLong(file.length());
+                            try (FileInputStream fis = new FileInputStream(file)) {
+                                byte[] bytes = fis.readAllBytes();
+                                dos.write(bytes);
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                        } catch (Exception e) {
+                            System.err.println("e = " + e.getMessage());
+                        }
                     }
                 } else {
                     System.out.println("Unknown command received: " + command);
