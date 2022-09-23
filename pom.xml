@@ -23,6 +23,7 @@
     <modules>
         <module>cloud_server</module>
         <module>common</module>
+        <module>nio</module>
     </modules>
 
     <properties>
