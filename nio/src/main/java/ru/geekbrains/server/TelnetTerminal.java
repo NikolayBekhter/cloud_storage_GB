@@ -14,7 +14,6 @@ import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class TelnetTerminal {
 
