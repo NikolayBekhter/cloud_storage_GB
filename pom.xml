@@ -21,9 +21,7 @@
         </plugins>
     </build>
     <modules>
-        <module>cloud_server</module>
         <module>common</module>
-        <module>nio</module>
         <module>netty</module>
     </modules>
 

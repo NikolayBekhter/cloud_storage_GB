@@ -6,7 +6,9 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
+import javafx.scene.control.ProgressBar;
 import ru.geekbrains.DaemonThreadFactory;
+import ru.geekbrains.constant.Constants;
 import ru.geekbrains.model.*;
 
 import java.io.*;
@@ -14,7 +16,10 @@ import java.net.Socket;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class CloudMainController implements Initializable {
     public ListView<String> clientView;
@@ -31,9 +36,21 @@ public class CloudMainController implements Initializable {
 
     private DaemonThreadFactory factory;
 
+    final Lock lock = new ReentrantLock();
+
+    public ProgressBar progressBar;
+
     public void sendToServer(ActionEvent actionEvent) throws IOException {
         String fileName = clientView.getSelectionModel().getSelectedItem();
-        network.getOutputStream().writeObject(new FileMessage(Path.of(currentDirectory).resolve(fileName)));
+        long size = Files.size((Path.of(currentDirectory,fileName)));
+        File file = Paths.get(currentDirectory,fileName).toFile();
+
+        if(file.exists() && file.isFile()){
+            writeFileToServer(fileName,size,file);
+        }
+        if(file.isDirectory()){
+            writeDirectoryToServer(fileName);
+        }
     }
 
     private void readMessages() {
@@ -55,7 +72,7 @@ public class CloudMainController implements Initializable {
 
     private void initNetwork() {
         try {
-            socket = new Socket("localhost", 8189);
+            socket = new Socket("localhost", 8181);
             network = new Network<>(
                     new ObjectDecoderInputStream(socket.getInputStream()),
                     new ObjectEncoderOutputStream(socket.getOutputStream())
@@ -124,8 +141,99 @@ public class CloudMainController implements Initializable {
         String fileName = serverView.getSelectionModel().getSelectedItem();
         network.getOutputStream().writeObject(new FileRequest(fileName));
     }
+    private void writeFileToServer(String fileName, long size, File file){
 
-    public void upServerDir(ActionEvent actionEvent) throws IOException {
-        network.getOutputStream().writeObject(new UpServerDir());
+        //если размер не превышает FILE_PACK_SIZE
+        if (size <= Constants.FILE_PACK_SIZE){
+            try (FileInputStream fis = new FileInputStream(file)){
+                FileMessage fm = FileMessage.builder()
+                        .multipart(false)
+                        .fileName(fileName)
+                        .bytes(fis.readAllBytes())
+                        .size(size)
+                        .build();
+                network.getOutputStream().writeObject(fm);
+            }catch (IOException  e){
+                e.printStackTrace();
+            }
+        }else{
+            //если размер превышает FILE_PACK_SIZE
+            Thread thread = new Thread(() -> {
+                lock.lock();
+
+                try(FileInputStream fis = new FileInputStream(file)) {
+                    byte[] buffer = new byte[Constants.FILE_PACK_SIZE];
+                    long packages = (long) Math.ceil((double) size / Constants.FILE_PACK_SIZE);
+
+                    long part = (long) (Math.ceil(packages)/100);
+                    long count = 0;
+                    int readBytes;
+                    while ((readBytes = fis.read(buffer)) != -1){
+                        FileMessage fileMessage = FileMessage.builder()
+                                .multipart(true)
+                                .fileName(fileName)
+                                .bytes(Arrays.copyOf(buffer, readBytes))
+                                .size(readBytes)
+                                .build();
+                        network.getOutputStream().writeObject(fileMessage);
+
+                        count++;
+                        if(count == part){
+                            count = 0;
+                            makeProgress();
+                        }
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }finally {
+                    progressBar.setProgress(0);
+                    lock.unlock();
+                }
+            });
+            thread.setDaemon(true);
+            thread.start();
+        }
     }
+
+    private void makeProgress() {
+        progress(progressBar);
+    }
+    private void progress(ProgressBar p){
+        //1%
+        double value = p.getProgress();
+        if(value < 0){
+            value = 0.01;
+        }else{
+            value = value + 0.01;
+            if(value >= 1.0){
+                value = 1.0;
+            }
+        }
+        p.setProgress(value);
+    }
+
+    private void writeDirectoryToServer(String dirName) {
+        System.out.println("Отправка директории не реализована");
+    }
+
+    public void deleteFile(ActionEvent actionEvent) {
+        String fileNameServer = serverView.getSelectionModel().getSelectedItem();
+        String fileNameClient = clientView.getSelectionModel().getSelectedItem();
+        if (fileNameServer != null) {
+            try {
+                network.getOutputStream().writeObject(new DeleteRequest(fileNameServer));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (fileNameClient != null) {
+            try {
+                Path filePath = Path.of(String.valueOf(Paths.get(currentDirectory, fileNameClient))).normalize();
+                Files.delete(filePath);
+                fillView(clientView, getFiles(currentDirectory));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
 }

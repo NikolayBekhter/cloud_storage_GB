@@ -1,0 +1,80 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,41 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="86f0595b-6b13-48ec-8252-9b0b895a3666" name="Changes" comment="реализован сервер подобие консоли, работает команда &quot;ls&quot;">
+-      <change afterPath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/Network.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/CloudMessage.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/FileMessage.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/FileRequest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/ListMessage.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/MessageType.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/OpenNewDir.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/UpServerDir.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/netty/pom.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/BufToString.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/EchoHandler.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/FileServer.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/StringToBuf.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/serial/FileHandler.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/netty/src/main/resources/log4j.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_09_2022_19_19_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_09_2022_19_19__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_09_2022_20_11_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_09_2022_20_11__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
++    <list default="true" id="86f0595b-6b13-48ec-8252-9b0b895a3666" name="Changes" comment="поддержаны команды навигации на сервере">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/module-info.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/CloudMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/CloudMainController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/resources/ru/geekbrains/cloud_client/cloud_client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/resources/ru/geekbrains/cloud_client/cloud_client.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/ru/geekbrains/CloudServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/target/classes/ru/geekbrains/CloudServer.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/common/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/module-info.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/common/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/module-info.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/nio/src/main/java/ru/geekbrains/server/TelnetTerminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/nio/src/main/java/ru/geekbrains/server/TelnetTerminal.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/ListMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/ListMessage.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/OpenNewDir.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/OpenNewDir.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/netty/target/classes/ru/geekbrains/serial/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/netty/target/classes/ru/geekbrains/serial/FileHandler.class" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -199,7 +169,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1663867534881</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="поддержаны команды навигации на сервере">
++      <created>1665073058390</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1665073058391</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -229,6 +206,7 @@
+     <MESSAGE value="Реализовал отправку файлов на сервер, с сохранением в папку на локальный диск." />
+     <MESSAGE value="Реализовал отображение списка файлов сервера на клиенте." />
+     <MESSAGE value="Переделал отображение списка файлов сервера на клиенте, добавил возможность скачать файл с сервера." />
+-    <option name="LAST_COMMIT_MESSAGE" value="Переделал отображение списка файлов сервера на клиенте, добавил возможность скачать файл с сервера." />
++    <MESSAGE value="поддержаны команды навигации на сервере" />
++    <option name="LAST_COMMIT_MESSAGE" value="поддержаны команды навигации на сервере" />
+   </component>
+ </project>
+\ No newline at end of file

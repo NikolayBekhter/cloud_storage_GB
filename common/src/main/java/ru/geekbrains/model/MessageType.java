@@ -5,5 +5,7 @@ public enum MessageType {
     FILE_REQUEST,
     FILE,
     OPEN_NEW_DIR,
-    UP_SERVER_DIR
+    FILE_MESSAGE,
+    DELETE_REQUEST,
+    PROGRESS_RESET
 }

@@ -3,4 +3,5 @@ module ru.geekbrains.common {
 
     exports ru.geekbrains;
     exports ru.geekbrains.model;
+    exports ru.geekbrains.constant;
 }

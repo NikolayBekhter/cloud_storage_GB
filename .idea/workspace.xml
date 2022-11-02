@@ -5,40 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86f0595b-6b13-48ec-8252-9b0b895a3666" name="Changes" comment="реализован сервер подобие консоли, работает команда &quot;ls&quot;">
-      <change afterPath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/Network.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/CloudMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/FileMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/FileRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/ListMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/OpenNewDir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/UpServerDir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/BufToString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/EchoHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/FileServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/StringToBuf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/serial/FileHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/constant/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/ProgressReset.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_09_2022_19_19_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_09_2022_19_19__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_09_2022_20_11_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_09_2022_20_11__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/CloudMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/java/ru/geekbrains/cloud_client/CloudMainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud_client/src/main/resources/ru/geekbrains/cloud_client/cloud_client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_client/src/main/resources/ru/geekbrains/cloud_client/cloud_client.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/ru/geekbrains/CloudServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_server/target/classes/ru/geekbrains/CloudServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/ru/geekbrains/CloudServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/src/main/java/ru/geekbrains/FileHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/ru/geekbrains/CloudServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/target/classes/ru/geekbrains/FileHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/target/maven-status/maven-compiler-plugin/compile/default-cli/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_server/target/maven-status/maven-compiler-plugin/compile/default-cli/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/FileMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/FileMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/ListMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/ListMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/UpServerDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/ru/geekbrains/model/DeleteRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nio/src/main/java/ru/geekbrains/server/TelnetTerminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/nio/src/main/java/ru/geekbrains/server/TelnetTerminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/FileMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/FileMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/ListMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/ListMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/MessageType.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/MessageType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/OpenNewDir.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/OpenNewDir.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/ru/geekbrains/model/UpServerDir.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/BufToString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/EchoHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/FileServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/FileServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/StringToBuf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/serial/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty/src/main/java/ru/geekbrains/serial/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/netty/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/netty/target/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty/target/classes/ru/geekbrains/FileServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/netty/target/classes/ru/geekbrains/FileServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty/target/classes/ru/geekbrains/serial/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/netty/target/classes/ru/geekbrains/serial/FileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nio/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nio/src/main/java/ru/geekbrains/server/TelnetTerminal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nio/target/classes/ru/geekbrains/server/TelnetTerminal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nio/target/maven-status/maven-compiler-plugin/compile/default-cli/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nio/target/maven-status/maven-compiler-plugin/compile/default-cli/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_files/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_files/putty.exe" beforeDir="false" afterPath="$PROJECT_DIR$/server_files/putty.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_files/Новая папка/Новая папка/Новая папка/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_files/Новая папка/Новая папка/Новая папка/desktop.ini" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,16 +83,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/коля диск С/Java/cloud_storage_GB&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "last_opened_file_path": "C:/Users/nvbek/IdeaProjects/cloud_storage_GB",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Java\cloud_storage_GB\common\src\main\java\ru\geekbrains" />

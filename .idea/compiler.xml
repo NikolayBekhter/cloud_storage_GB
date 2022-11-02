@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud_client" />
-        <module name="cloud_server" />
         <module name="common" />
-        <module name="nio" />
         <module name="netty" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud_server" target="17" />
+      <module name="nio" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
