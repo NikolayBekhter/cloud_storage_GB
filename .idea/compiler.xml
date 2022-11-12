@@ -11,6 +11,7 @@
         <module name="cloud_server" />
         <module name="common" />
         <module name="nio" />
+        <module name="netty" />
       </profile>
     </annotationProcessing>
   </component>
