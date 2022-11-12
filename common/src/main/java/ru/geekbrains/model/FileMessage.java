@@ -1,26 +1,21 @@
 package ru.geekbrains.model;
 
+import lombok.Builder;
 import lombok.Getter;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-
 @Getter
+@Builder
 public class FileMessage implements CloudMessage{
 
     private final String fileName;
     private final long size;
     private final byte[] bytes;
-
-    public FileMessage(Path file) throws IOException {
-        fileName = file.getFileName().toString();
-        bytes = Files.readAllBytes(file);
-        size = bytes.length;
-    }
+    private boolean multipart;
+    private boolean doProgress;
 
     @Override
     public MessageType getType() {
-        return MessageType.FILE;
+        return MessageType.FILE_MESSAGE;
     }
+
 }
